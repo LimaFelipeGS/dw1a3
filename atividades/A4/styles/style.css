@@ -132,3 +132,11 @@ input{
 #idade:hover{
     cursor: pointer;
 }
+
+footer{
+    font-family: poppinslight;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 5px;
+}
