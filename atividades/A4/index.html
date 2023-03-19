@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=".//styles/style.css" rel="stylesheet">
+    <link href=".//styles/fonts.css" rel="stylesheet">
+    <link href=".//styles/media.css" rel="stylesheet">
+    <title>A4</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Marketing</h1>
+            <h1>Creativo</h1>
+        </div>
+
+        <ul>
+            <a href="#" target="_self"><li>Início</li></a>
+            <a href="#" target="_self"><li>Serviços</li></a>
+            <a href="#" target="_self"><li>Sobre</li></a>
+            <a href="#" target="_self"><li>Contato</li></a>
+            <a href="#" target="_self" id="Inscreva-se-botao"><li>Já tem uma conta?</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2><span>Inscreva-se agora</span></h2>   
+            <h2>na Newsletter</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+            <form action="index.html" target="_self" method="get">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <div id="genero">
+                    <div class="generopcao">
+                        <input type="radio" id="M" name="genero" value="M">
+                        <label for="M">Masculino</label>
+                    </div>
+                    <div class="generopcao">
+                        <input type="radio" id="F" name="genero" value="F">
+                        <label for="F">Feminino</label>
+                    </div>
+                    <div class="generopcao">
+                        <input type="radio" id="O" name="genero" value="O">
+                        <label for="O">Outro</label>
+                    </div>
+                </div>
+                
+                <label for="idade">Idade:</label>
+                <select name="idade" id="idade">
+                    <option value="" disabled selected hidden>Idade</option>
+                    <option value="17-">Até 17</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-30">25-30</option>
+                    <option value="31-40">31-40</option>
+                    <option value="40+">Maior que 40</option>
+                </select>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" class="form-control" id="phone" name="phone"
+                placeholder="(99) 9999-9999"
+                pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+                title="Número de telefone precisa ser no formato (99) 9999-9999"/>
+
+                <input type="submit" value="Enviar >">
+            </form>
+        </aside>
+
+        <article>
+            <img id="mulheroxa" src="./components/images/77d0a7c454e658833800528e748edbe9.png" alt="Mulher roxa">
+        </article>
+    </main>
+</body>
+</html>
