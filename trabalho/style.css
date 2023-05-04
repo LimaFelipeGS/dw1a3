@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: rgb(17, 17, 17);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+    color: white;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: rgb(17, 17, 17);
+    font-weight: 500;
+    color: white;
+}
+
+a {
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+button {
+    background-color: #3dd705;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #49aa26;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.button.cancel {
+    color: #e92929;
+    border: 2px #e92929 solid;
+    border-radius: 0.25rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+header {
+    background: #253f1e;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: rgb(17, 17, 17);
+    font-weight: 300;
+}
+
+#balance {
+    margin-top: -8rem;
+    color: white;
+}
+
+#balance h2 {
+    color: rgb(17, 17, 17);
+    margin-top: 0;
+}
+
+.card {
+    background: rgb(12, 12, 12);
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: #49aa26;
+}
+
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+table th {
+    background: rgb(12, 12, 12);
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+    color: rgb(158, 158, 158);
+}
+
+table tr {
+    opacity: 0.7;
+}
+
+table tr:hover {
+    opacity: 1;
+}
+
+table td {
+    background: rgb(12, 12, 12);
+    padding: 1rem 2rem;
+    font-weight: normal;
+    color: rgb(158, 158, 158);
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child {
+    border-radius: 0.5rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child, 
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+td.description {
+    color: white;
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: black !important;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: rgb(17, 17, 17);
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+.help {
+    color: white;
+    opacity: 0.4;
+}
+
+#form {
+    max-width: 500px;
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button, 
+.input-group.actions button {
+    width: 48%;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: white;
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
