@@ -1,3 +1,4 @@
+window.alert('Olá, digite a seguir os valores da curvatura de cada borda da figura')
 const topleft = prompt('Digite o valor da borda superior esquerda (em píxels)')
 const topright = prompt('Digite o valor da borda superior direita (em píxels)')
 const botleft = prompt('Digite o valor da borda inferior direita (em píxels)')
