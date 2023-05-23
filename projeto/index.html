@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Health Planner</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="Logo Dark Mode"><img src="" alt="Logo Light Mode">
+        </div>
+
+        <div class="buttons-header">
+        <a href="#" class="button-profile">Perfil</a>
+        <a href="#" class="button-planner">Planejamento</a>
+        <a href="#" class="button-controller">Controle</a>
+        </div>
+    </header>
+
+    <section id="profile">
+        <div class="buttons-profile">
+        <a href="#" class="button-new-profile">Criar Perfil</a>
+        <a href="#" class="button-edit-profile">Editar Perfil</a>
+        <a href="#" class="button-delete-profile">Excluir Perfil</a>
+        </div>
+
+        <p class="profile-name">Nome</p>
+
+        <div class="profile-stats">
+            <div class="height">
+                <p class="stats-title">Altura</p>
+                <p class="stats-body"></p>
+            </div>
+            <div class="weight">
+                <p class="stats-title">Peso Atual</p>
+                <p class="stats-body"></p>
+            </div>
+            <div class="gainloss">
+                <div class="img-gainloss"><img src="" alt="Fígura de Ganho de Peso"><img src="" alt="Figura de Perda de Peso"></div>
+                <p class="stats-title">Ganho/Perda de Peso</p>
+                <p class="stats-body"></p>
+            </div>
+        </div>
+
+        <div class="img-body">
+            <img src="" alt="Figura Corpo Humano Dark Mode"><img src="Figura Corpo Humano Light Mode" alt="">
+        </div>
+
+        <table id="weight-history">
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Data</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section id="planner"></section>
+
+    <section id="controller"></section>
+
+    <footer></footer>
+
+    <div class="overlay-create-profile">
+        <div class="modal">
+            <div id="form">
+                <h2>Criar Perfil</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="create-profile-name">Nome</label>
+                        <input type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="">Altura</label>
+                        <input type="number" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="">Peso</label>
+                        <input type="number" id="create-profile-weight" name="Peso do Perfil" placeholder="Peso (kg)">
+                    </div>
+                    <small class="help">Para especificar as gramas, use , (vírgula)</small>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel">Cancelar</a>
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-update-weight"></div>
+
+    <div class="overlay-create-routine"></div>
+
+    <div class="overlay-create-exercise"></div>
+
+    <div class="overlay-add-exercise"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
