@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
             <img src="" alt="Logo Dark Mode"><img src="" alt="Logo Light Mode">
         </div>
 
-        <div class="buttons-header">
+        <div class="buttons header">
         <a href="#" class="button-profile">Perfil</a>
         <a href="#" class="button-planner">Planejamento</a>
         <a href="#" class="button-controller">Controle</a>
@@ -21,7 +21,7 @@
     </header>
 
     <section id="profile">
-        <div class="buttons-profile">
+        <div class="buttons profile">
         <a href="#" class="button-new-profile">Criar Perfil</a>
         <a href="#" class="button-edit-profile">Editar Perfil</a>
         <a href="#" class="button-delete-profile">Excluir Perfil</a>
@@ -61,15 +61,62 @@
         </table>
     </section>
 
-    <section id="planner"></section>
+    <section id="planner">
+        <div class="buttons planner">
+            <a href="#" class="button-create-routine">Criar Rotina</a>
+            <a href="#" class="button-show-exercises">Exercícios</a>
+        </div>
 
-    <section id="controller"></section>
+        <div class="routine">
+            <p>Rotina 1</p>
 
-    <footer></footer>
+        </div>
+    </section>
+
+    <section id="controller">
+        <div class="buttons controller">
+            <a href="#" class="button-add-exercise">Adicionar Exercício</a>
+        </div>
+
+        <table id="exercises-added">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Séries</th>
+                    <th>Repetições</th>
+                    <th>Tempo</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="controller-stats">
+            <div class="total-exercises">
+                <p class="stats-title">Total de Exercícios Realizados</p>
+                <p class="stats-body"></p>
+            </div>
+            <div class="total-time">
+                <p class="stats-title">Tempo Exercitando</p>
+                <p class="stats-body"></p>
+                <p class="stats-complement">horas</p>
+            </div>
+            <div class="total-days">
+                <p class="stats-title">Dias Exercitando</p>
+                <p class="stats-body"></p>
+                <p class="stats-complement">dias</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-text">Health.Planner - 2023</p>
+    </footer>
 
     <div class="overlay-create-profile">
         <div class="modal">
-            <div id="form">
+            <div class="form">
                 <h2>Criar Perfil</h2>
                 <form action="">
                     <div class="input-group">
@@ -77,11 +124,11 @@
                         <input type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
                     </div>
                     <div class="input-group">
-                        <label class="sr-only" for="">Altura</label>
+                        <label class="sr-only" for="create-profile-height">Altura</label>
                         <input type="number" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
                     </div>
                     <div class="input-group">
-                        <label class="sr-only" for="">Peso</label>
+                        <label class="sr-only" for="create-profile-weight">Peso</label>
                         <input type="number" id="create-profile-weight" name="Peso do Perfil" placeholder="Peso (kg)">
                     </div>
                     <small class="help">Para especificar as gramas, use , (vírgula)</small>
@@ -94,13 +141,106 @@
         </div>
     </div>
 
-    <div class="overlay-update-weight"></div>
+    <div class="overlay-update-weight">
+        <div class="modal">
+            <div class="form">
+                <h2>Atualizar Peso</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="update-profile-weight"></label>
+                        <input type="number" id="update-profile-weight" name="Novo Peso" placeholder="Novo Peso (kg)">
+                    </div>
+                    <small class="help">Para especificar as gramas, use , (vírgula)</small>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel">Cancelar</a>
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <div class="overlay-create-routine"></div>
+    <div class="overlay-view-exercises">
+        <button>Criar Exercício</button>
+        <button class="button-cancel">X</button>
 
-    <div class="overlay-create-exercise"></div>
+        <table id="exercises-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-    <div class="overlay-add-exercise"></div>
+    <div class="overlay-create-exercise">
+        <div class="modal">
+            <div class="form">
+                <h2>Criar Exercício</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="exercise-name">Nome</label>
+                        <input type="text" id="exercise-name" name="Nome do Exercício" placeholder="Nome">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="exercise-type">Tipo</label>
+                        <input type="text" id="exercise-type" name="Tipo do Exercício" placeholder="Tipo">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel">Cancelar</a>
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-add-exercise">
+        <div class="modal">
+            <div class="form">
+                <h2>Adicionar Exercício</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="exercises-list">Exercício</label>
+                        <input list="exercises-list" type="text" id="exercises" name="Exercícios" placeholder="Nome do Exercício">
+                        <datalist id="exercises-list">
+                            <option value=""></option>
+                        </datalist>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="series-amount">Número de Séries</label>
+                        <input type="number" step="1" id="series-amount" name="Quantidade de Séries" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="reps-amount">Número de Repetições por Série</label>
+                        <input type="text" step="1" id="reps-amount" name="Quantidade de Repetições por Série" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="time-spent">Tempo de Realização do Exercício (em minutos)</label>
+                        <input type="number" step="1" id="time-spent" name="Tempo de Realização" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="exercise-date">Data</label>
+                        <input type="date" id="exercise-date" name="Data de Realização do Exercício" placeholder="DD/MM/AAAA">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel">Cancelar</a>
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-confirm-delete">
+        <p>Tem certeza que deseja excluir?</p>
+        <div class="input-group actions">
+            <a href="#" class="button-cancel">Cancelar</a>
+            <button>Confirmar</button>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
