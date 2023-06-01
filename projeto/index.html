@@ -10,21 +10,21 @@
 <body>
     <header>
         <div class="logo">
-            <img src="" alt="Logo Dark Mode"><img src="" alt="Logo Light Mode">
+            <img id="logo-dm" src="" alt="Logo Dark Mode"><img id="logo-lm" src="" alt="Logo Light Mode">
         </div>
 
-        <div class="buttons header">
-        <a href="#" class="button-profile">Perfil</a>
-        <a href="#" class="button-planner">Planejamento</a>
-        <a href="#" class="button-controller">Controle</a>
+        <div class="button header">
+        <a href="#" class="button header profile">Perfil</a>
+        <a href="#" class="button header planner">Planejamento</a>
+        <a href="#" class="button header controller">Controle</a>
         </div>
     </header>
 
     <section id="profile">
-        <div class="buttons profile">
-        <a href="#" class="button-new-profile">Criar Perfil</a>
-        <a href="#" class="button-edit-profile">Editar Perfil</a>
-        <a href="#" class="button-delete-profile">Excluir Perfil</a>
+        <div class="button profile general">
+        <a href="#" class="button profile new">Criar Perfil</a>
+        <a href="#" class="button profile edit">Editar Perfil</a>
+        <a href="#" class="button profile delete">Excluir Perfil</a>
         </div>
 
         <p class="profile-name">Nome</p>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="img-body">
-            <img src="" alt="Figura Corpo Humano Dark Mode"><img src="Figura Corpo Humano Light Mode" alt="">
+            <img id="body-dm" src="" alt="Figura Corpo Humano Dark Mode"><img id="body-lm" src="" alt="Figura Corpo Humano Light Mode">
         </div>
 
         <table id="weight-history">
@@ -62,8 +62,8 @@
     </section>
 
     <section id="controller">
-        <div class="buttons controller">
-            <a href="#" class="button-add-exercise">Adicionar Exercício</a>
+        <div class="button controller">
+            <a href="#" class="button exercise add">Adicionar Exercício</a>
         </div>
 
         <table id="exercises-added">
@@ -102,7 +102,7 @@
         <p class="footer-text">Health.Planner - 2023</p>
     </footer>
 
-    <div class="overlay-create-profile">
+    <div class="overlay create-profile">
         <div class="modal">
             <div class="form">
                 <h2>Criar Perfil</h2>
@@ -129,7 +129,7 @@
         </div>
     </div>
 
-    <div class="overlay-update-weight">
+    <div class="overlay update-weight">
         <div class="modal">
             <div class="form">
                 <h2>Atualizar Peso</h2>
@@ -148,7 +148,7 @@
         </div>
     </div>
 
-    <div class="overlay-view-exercises">
+    <div class="overlay view-exercises">
         <button>Criar Exercício</button>
         <button class="button-cancel">X</button>
 
@@ -163,7 +163,7 @@
         </table>
     </div>
 
-    <div class="overlay-create-exercise">
+    <div class="overlay create-exercise">
         <div class="modal">
             <div class="form">
                 <h2>Criar Exercício</h2>
@@ -185,7 +185,7 @@
         </div>
     </div>
 
-    <div class="overlay-add-exercise">
+    <div class="overlay add-exercise">
         <div class="modal">
             <div class="form">
                 <h2>Adicionar Exercício</h2>
@@ -222,7 +222,7 @@
         </div>
     </div>
 
-    <div class="overlay-confirm-delete">
+    <div class="overlay confirm-delete">
         <p>Tem certeza que deseja excluir?</p>
         <div class="input-group actions">
             <a href="#" class="button-cancel">Cancelar</a>
