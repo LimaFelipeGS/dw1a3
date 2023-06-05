@@ -10,43 +10,44 @@
 <body>
     <header>
         <div class="logo">
-            <img id="logo-dm" src="" alt="Logo Dark Mode"><img id="logo-lm" src="" alt="Logo Light Mode">
+            <img id="logo" src="./components/images/Logo-Dark.png" alt="Logo">
         </div>
 
         <div class="button header">
-        <a href="#" class="button header profile">Perfil</a>
-        <a href="#" class="button header planner">Planejamento</a>
-        <a href="#" class="button header controller">Controle</a>
+        <a href="#" class="button-header profile">Perfil</a>
+        <a href="#" class="button-header controller">Controle</a>
         </div>
     </header>
 
     <section id="profile">
-        <div class="button profile general">
+        <div class="button profile-general">
         <a href="#" class="button profile new">Criar Perfil</a>
         <a href="#" class="button profile edit">Editar Perfil</a>
         <a href="#" class="button profile delete">Excluir Perfil</a>
         </div>
 
-        <p class="profile-name">Nome</p>
-
+        <div class="profile-body">
         <div class="profile-stats">
             <div class="height">
                 <p class="stats-title">Altura</p>
-                <p class="stats-body"></p>
+                <p class="stats-body standard">1.80m</p>
             </div>
             <div class="weight">
                 <p class="stats-title">Peso Atual</p>
-                <p class="stats-body"></p>
+                <p class="stats-body standard">87kg</p>
             </div>
             <div class="gainloss">
-                <div class="img-gainloss"><img src="" alt="Fígura de Ganho de Peso"><img src="" alt="Figura de Perda de Peso"></div>
                 <p class="stats-title">Ganho/Perda de Peso</p>
-                <p class="stats-body"></p>
+                <div class="gainloss-stats">
+                    <div class="img-gainloss"><img src="./components/images/Ganho de Peso.png" alt="Fígura de Ganho de Peso"><img class="hidden-content" src="./components/images/Componentes_Perda de Peso.png" alt="Figura de Perda de Peso"></div>
+                    <p class="stats-body">2kg</p>
+                </div>
             </div>
         </div>
 
         <div class="img-body">
-            <img id="body-dm" src="" alt="Figura Corpo Humano Dark Mode"><img id="body-lm" src="" alt="Figura Corpo Humano Light Mode">
+            <p class="profile-name">Nome</p>
+            <img id="body-figure" src="./components/images/Corpo-Dark.png" alt="Figura Corpo Humano">
         </div>
 
         <table id="weight-history">
@@ -59,6 +60,7 @@
             </thead>
             <tbody></tbody>
         </table>
+        </div>
     </section>
 
     <section id="controller">

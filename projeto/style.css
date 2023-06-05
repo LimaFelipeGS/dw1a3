@@ -1,3 +1,8 @@
+:root {
+    --brandpurple: #5F2DAD;
+    --grey: #4D4D4D;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +19,14 @@ body {
     text-decoration: none;
 }
 
+/*=============================== HEADER ===============================*/
+
+.button-header {
+    text-decoration: none;
+}
+
 header {
-    background-color: rgb(58, 58, 58);
+    background-color: var(--grey);
     padding: 75px 0 0 0;
     display: flex;
     flex-direction: column;
@@ -26,9 +37,11 @@ header {
     margin-bottom: 50px;
 }
 
-#logo-lm {
-    visibility: hidden;
+#logo {
+    width: 300px;
 }
+
+/*=============================== PROFILE ===============================*/
 
 #profile {
     margin: 35px;
@@ -37,52 +50,103 @@ header {
     border-radius: 15px;
 }
 
-.button.profile.general {
+.button.profile-general {
     display: flex;
     flex-direction: row;
     
 }
 
-.button.profile.new {
-    border: 2px solid rgb(188, 131, 25);
-    padding: 1px 10px 1px 10px;
+.button.profile {
+    border: 2px solid var(--brandpurple);
+    padding: 1px 20px 1px 20px;
     border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
 }
 
-.button.profile.new:hover {
-    background-color: rgb(188, 131, 25);
+.button.profile:hover {
+    background-color: var(--brandpurple);
     
 }
 
-.button.profile.edit {
-    border: 2px solid rgb(188, 131, 25);
-    padding: 1px 10px 1px 10px;
-    border-radius: 20px;
+.profile-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.button.profile.edit:hover {
-    background-color: rgb(188, 131, 25);
-    
+/*=============================== PROFILE-STATS ===============================*/
+
+.profile-stats {
+    margin-top: 100px;
 }
 
-.button.profile.delete {
-    border: 2px solid rgb(188, 131, 25);
-    padding: 1px 10px 1px 10px;
-    border-radius: 20px;
+.stats-title {
+    margin-bottom: 10px;
 }
 
-.button.profile.delete:hover {
-    background-color: rgb(188, 131, 25);
-    
+.height {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gainloss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-body {
+    border: 3px solid var(--brandpurple);
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-body.standard {
+    margin-bottom: 60px;
+}
+
+.gainloss-stats {
+    margin-left: -45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*=============================== PROFILE-IMG-BODY ===============================*/
 
 .img-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 60px;
+}
+
+#body-figure {
+    opacity: 0.4;
+    height: 800px;
+}
+
+/*=============================== PROFILE-TABLE ===============================*/
+
+#weight-history {
 
 }
 
-#body-lm {
-    visibility: hidden;
-}
+/*=============================== CONTROLLER ===============================*/
 
 #controller {
     visibility: hidden;
@@ -114,4 +178,10 @@ header {
 .overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+.hidden-content {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
 }
