@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
     <title>Health Planner</title>
 </head>
 <body>
@@ -13,34 +16,35 @@
             <img id="logo" src="./components/images/Logo-Dark.png" alt="Logo">
         </div>
 
-        <div class="button header">
-        <a href="#" class="button-header profile">Perfil</a>
-        <a href="#" class="button-header controller">Controle</a>
+        <div class="button-header class">
+        <a href="#" class="button header profile">Perfil</a>
+        <a href="#" class="button header controller">Controle</a>
         </div>
     </header>
 
     <section id="profile">
         <div class="button profile-general">
-        <a href="#" class="button profile new">Criar Perfil</a>
-        <a href="#" class="button profile edit">Editar Perfil</a>
-        <a href="#" class="button profile delete">Excluir Perfil</a>
+        <a href="#" class="button section profile new">Criar Perfil</a>
+        <a href="#" class="button section profile edit">Editar Perfil</a>
+        <a href="#" class="button section profile delete">Excluir Perfil</a>
         </div>
 
-        <div class="profile-body">
+    <div class="profile-body">
         <div class="profile-stats">
             <div class="height">
                 <p class="stats-title">Altura</p>
-                <p class="stats-body standard">1.80m</p>
+                <p class="stats-body height">1.80 m</p>
             </div>
             <div class="weight">
                 <p class="stats-title">Peso Atual</p>
-                <p class="stats-body standard">87kg</p>
+                <p class="stats-body weight">87 kg</p>
+                <button class="update weight">Atualizar Peso</button>
             </div>
             <div class="gainloss">
                 <p class="stats-title">Ganho/Perda de Peso</p>
                 <div class="gainloss-stats">
                     <div class="img-gainloss"><img src="./components/images/Ganho de Peso.png" alt="Fígura de Ganho de Peso"><img class="hidden-content" src="./components/images/Componentes_Perda de Peso.png" alt="Figura de Perda de Peso"></div>
-                    <p class="stats-body">2kg</p>
+                    <p class="stats-body gainloss">2kg</p>
                 </div>
             </div>
         </div>
@@ -50,17 +54,31 @@
             <img id="body-figure" src="./components/images/Corpo-Dark.png" alt="Figura Corpo Humano">
         </div>
 
-        <table id="weight-history">
-            <thead>
-                <tr>
-                    <th>Peso</th>
-                    <th>Data</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <div class="table-profile">
+            <table id="weight-history">
+                <thead>
+                    <tr>
+                        <th>Peso</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>78.5 kg</td>
+                        <td>28/02/2023</td>
+                    </tr>
+                    <tr>
+                        <td>82 kg</td>
+                        <td>30/03/2023</td>
+                    </tr>
+                    <tr>
+                        <td>81 kg</td>
+                        <td>15/05/2023</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
     </section>
 
     <section id="controller">
