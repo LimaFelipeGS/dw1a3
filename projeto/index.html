@@ -26,7 +26,6 @@
         <a href="#" onclick="Modal.openNewProfile()" id="button-profile-new" class="button-profile-new">Criar Perfil <p class="plus">+</p></a>
 
         <div id="profile-buttons" class="button profile-general hidden-content">
-            <!-- <a href="#" onclick="Modal.openEditProfile()" class="button section profile edit">Editar Perfil</a> -->
             <a href="#" onclick="Modal.openConfirmDelete()" class="button section profile delete">Excluir Perfil</a>
         </div>
 
@@ -131,29 +130,6 @@
                         <input id="new-profile-weight" class="input" type="number" step="0.01" id="create-profile-weight" name="Peso do Perfil" placeholder="Peso (kg)">
                     </div>
                     <small class="help">Para especificar as gramas, use , (vírgula)</small>
-                    <div class="input-group actions">
-                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
-                        <button class="button confirm">Confirmar</button>
-                    </div>
-                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="ov-edit-profile" class="overlay edit-profile">
-        <div class="modal">
-            <div class="form">
-                <h2>Editar Perfil</h2>
-                <form action="">
-                    <div class="input-group">
-                        <label class="sr-only" for="create-profile-name">Nome</label>
-                        <input class="input" type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
-                    </div>
-                    <div class="input-group">
-                        <label class="sr-only" for="create-profile-height">Altura</label>
-                        <input class="input" type="number" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
-                    </div>
                     <div class="input-group actions">
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
                         <button class="button confirm">Confirmar</button>
