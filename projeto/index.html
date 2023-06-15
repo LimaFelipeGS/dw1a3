@@ -197,7 +197,7 @@
                     </div>
                     <div class="input-group actions">
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
-                        <button onclick="NewRegisterForm.submit(event)" class="button confirm">Confirmar</button>
+                        <button onclick="Modal.close();NewRegisterForm.submit(event);" class="button confirm">Confirmar</button>
                     </div>
                     <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
                 </form>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="input-group actions">
                         <a href="#" onclick="Modal.closeNewEx()" class="button cancel">Cancelar</a>
-                        <button onclick="NewExerciseForm.submit(event)" class="button confirm">Confirmar</button>
+                        <button onclick="Modal.closeNewEx();NewExerciseForm.submit(event);" class="button confirm">Confirmar</button>
                     </div>
                     <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
                 </form>
