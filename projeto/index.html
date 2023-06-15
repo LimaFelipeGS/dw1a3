@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <title>Health Planner</title>
 </head>
 <body>
@@ -17,103 +17,94 @@
         </div>
 
         <div class="button-header class">
-        <a href="#" class="button header profile">Perfil</a>
-        <a href="#" class="button header controller">Controle</a>
+        <a href="#" id="button-header-profile" class="button-header profile on">Perfil</a>
+        <a href="#" id="button-header-controller" class="button-header controller">Controle</a>
         </div>
     </header>
 
     <section id="profile">
-        <div class="button profile-general">
-        <a href="#" class="button section profile new">Criar Perfil</a>
-        <a href="#" class="button section profile edit">Editar Perfil</a>
-        <a href="#" class="button section profile delete">Excluir Perfil</a>
+        <a href="#" onclick="Modal.openNewProfile()" id="button-profile-new" class="button-profile-new">Criar Perfil <p class="plus">+</p></a>
+
+        <div id="profile-buttons" class="button profile-general hidden-content">
+            <!-- <a href="#" onclick="Modal.openEditProfile()" class="button section profile edit">Editar Perfil</a> -->
+            <a href="#" onclick="Modal.openConfirmDelete()" class="button section profile delete">Excluir Perfil</a>
         </div>
 
-    <div class="profile-body">
-        <div class="profile-stats">
-            <div class="height">
-                <p class="stats-title">Altura</p>
-                <p class="stats-body height">1.80 m</p>
-            </div>
-            <div class="weight">
-                <p class="stats-title">Peso Atual</p>
-                <p class="stats-body weight">87 kg</p>
-                <button class="update weight">Atualizar Peso</button>
-            </div>
-            <div class="gainloss">
-                <p class="stats-title">Ganho/Perda de Peso</p>
-                <div class="gainloss-stats">
-                    <div class="img-gainloss"><img src="./components/images/Ganho de Peso.png" alt="Fígura de Ganho de Peso"><img class="hidden-content" src="./components/images/Componentes_Perda de Peso.png" alt="Figura de Perda de Peso"></div>
-                    <p class="stats-body gainloss">2kg</p>
+        <div id="profile-body" class="profile-body hidden-content">
+            <div class="profile-stats">
+                <div class="inner-profile-stats"></div>
+                <div id="gainloss-stats" class="gainloss">
+                    <p class="stats-title">Diferença de Peso</p>
+                    <div class="gainloss-stats">
+                        <div class="img-gainloss">
+                            <img id="gain" class="hidden-content" src="./components/images/Ganho de Peso.png" alt="Fígura de Ganho de Peso">
+                            <img id="loss" class="hidden-content" src="./components/images/Componentes_Perda de Peso.png" alt="Figura de Perda de Peso"></div>
+                        <p class="stats-body gainloss">0 kg</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="img-body">
+                <p id="name" class="profile-name">Nome</p>
+                <img id="body-figure" src="./components/images/Corpo-Dark.png" alt="Figura Corpo Humano">
+            </div>
+
+            <div class="table-profile">
+                <h1 id="table-title">Histórico de Peso</h1>
+                <table id="weight-history">
+                    <thead>
+                        <tr>
+                            <th>Peso</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="controller" class="hidden-content">
+        <div class="button controller-div">
+            <a href="#" onclick="Modal.openAddExercise()" class="button section controller exercise add">Adicionar Exercício</a>
         </div>
 
-        <div class="img-body">
-            <p class="profile-name">Nome</p>
-            <img id="body-figure" src="./components/images/Corpo-Dark.png" alt="Figura Corpo Humano">
-        </div>
-
-        <div class="table-profile">
-            <table id="weight-history">
-                <thead>
+        <div class="controller-body">
+            <table id="exercises-added">
+                <thead class="hidden-content">
                     <tr>
-                        <th>Peso</th>
+                        <th>Nome</th>
+                        <th>Series</th>
+                        <th>Reps</th>
+                        <th>Tempo</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>78.5 kg</td>
-                        <td>28/02/2023</td>
-                    </tr>
-                    <tr>
-                        <td>82 kg</td>
-                        <td>30/03/2023</td>
-                    </tr>
-                    <tr>
-                        <td>81 kg</td>
-                        <td>15/05/2023</td>
-                    </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    </section>
 
-    <section id="controller">
-        <div class="button controller">
-            <a href="#" class="button exercise add">Adicionar Exercício</a>
-        </div>
-
-        <table id="exercises-added">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Tipo</th>
-                    <th>Séries</th>
-                    <th>Repetições</th>
-                    <th>Tempo</th>
-                    <th>Data</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-
-        <div class="controller-stats">
-            <div class="total-exercises">
-                <p class="stats-title">Total de Exercícios Realizados</p>
-                <p class="stats-body"></p>
-            </div>
-            <div class="total-time">
-                <p class="stats-title">Tempo Exercitando</p>
-                <p class="stats-body"></p>
-                <p class="stats-complement">horas</p>
-            </div>
-            <div class="total-days">
-                <p class="stats-title">Dias Exercitando</p>
-                <p class="stats-body"></p>
-                <p class="stats-complement">dias</p>
+            <div class="controller-stats">
+                <div class="total-exercises">
+                    <p class="stats-title">Total de Exercícios Realizados</p>
+                    <p class="stats-body te">0</p>
+                </div>
+                <div class="total-time">
+                    <p class="stats-title">Tempo Exercitando</p>
+                    <div class="total-time-stats">
+                        <p class="stats-body tt">0</p>
+                        <p class="stats-complement">horas</p>
+                    </div>
+                </div>
+                <div class="total-days">
+                    <p class="stats-title">Dias Exercitando</p>
+                    <div class="total-days-stats">
+                        <p class="stats-body td">0</p>
+                        <p class="stats-complement">dias</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -122,131 +113,148 @@
         <p class="footer-text">Health.Planner - 2023</p>
     </footer>
 
-    <div class="overlay create-profile">
+    <div id="ov-create-profile" class="overlay create-profile">
         <div class="modal">
             <div class="form">
                 <h2>Criar Perfil</h2>
-                <form action="">
+                <form action="" onsubmit="NewProfileForm.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="create-profile-name">Nome</label>
-                        <input type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
+                        <input id="new-profile-name" class="input" type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="create-profile-height">Altura</label>
-                        <input type="number" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
+                        <input id="new-profile-height" class="input" type="number" data-js="height" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="create-profile-weight">Peso</label>
-                        <input type="number" id="create-profile-weight" name="Peso do Perfil" placeholder="Peso (kg)">
+                        <input id="new-profile-weight" class="input" type="number" step="0.01" id="create-profile-weight" name="Peso do Perfil" placeholder="Peso (kg)">
                     </div>
                     <small class="help">Para especificar as gramas, use , (vírgula)</small>
                     <div class="input-group actions">
-                        <a href="#" class="button-cancel">Cancelar</a>
-                        <button>Confirmar</button>
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button class="button confirm">Confirmar</button>
                     </div>
+                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="overlay update-weight">
+    <div id="ov-edit-profile" class="overlay edit-profile">
+        <div class="modal">
+            <div class="form">
+                <h2>Editar Perfil</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="create-profile-name">Nome</label>
+                        <input class="input" type="text" id="create-profile-name" name="Nome do Perfil" placeholder="Nome">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="create-profile-height">Altura</label>
+                        <input class="input" type="number" id="create-profile-height" name="Altura do Perfil" placeholder="Altura (cm)">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button class="button confirm">Confirmar</button>
+                    </div>
+                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="ov-update-weight" class="overlay update-weight">
         <div class="modal">
             <div class="form">
                 <h2>Atualizar Peso</h2>
-                <form action="">
+                <form action="" onsubmit="preventDefault()">
                     <div class="input-group">
                         <label class="sr-only" for="update-profile-weight"></label>
-                        <input type="number" id="update-profile-weight" name="Novo Peso" placeholder="Novo Peso (kg)">
+                        <input class="input" type="number" id="update-profile-weight" name="Novo Peso" placeholder="Novo Peso (kg)">
                     </div>
                     <small class="help">Para especificar as gramas, use , (vírgula)</small>
                     <div class="input-group actions">
-                        <a href="#" class="button-cancel">Cancelar</a>
-                        <button>Confirmar</button>
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button onclick="UpdateWeightForm.submit(event)" class="button confirm">Confirmar</button>
                     </div>
+                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="overlay view-exercises">
-        <button>Criar Exercício</button>
-        <button class="button-cancel">X</button>
-
-        <table id="exercises-table">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Tipo</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <div class="overlay create-exercise">
-        <div class="modal">
-            <div class="form">
-                <h2>Criar Exercício</h2>
-                <form action="">
-                    <div class="input-group">
-                        <label class="sr-only" for="exercise-name">Nome</label>
-                        <input type="text" id="exercise-name" name="Nome do Exercício" placeholder="Nome">
-                    </div>
-                    <div class="input-group">
-                        <label class="sr-only" for="exercise-type">Tipo</label>
-                        <input type="text" id="exercise-type" name="Tipo do Exercício" placeholder="Tipo">
-                    </div>
-                    <div class="input-group actions">
-                        <a href="#" class="button-cancel">Cancelar</a>
-                        <button>Confirmar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="overlay add-exercise">
+    <div id="ov-add-exercise" class="overlay add-exercise">
         <div class="modal">
             <div class="form">
                 <h2>Adicionar Exercício</h2>
-                <form action="">
+                <form action="" onsubmit="preventDefault()">
                     <div class="input-group">
                         <label class="sr-only" for="exercises-list">Exercício</label>
-                        <input list="exercises-list" type="text" id="exercises" name="Exercícios" placeholder="Nome do Exercício">
-                        <datalist id="exercises-list">
-                            <option value=""></option>
-                        </datalist>
+                        <div class="input-exercises">
+                            <select id="exercises-list" class="input" name="exercises-list">
+                                <option value="default" selected disabled hidden>Exercício</option>
+                                <!-- <option value="Bicicleta">Bicicleta</option>
+                                <option value="Abdominal">Abdominal</option>
+                                <option value="Flexão">Flexão</option>
+                                <option value="Panturrilha">Panturrilha</option>
+                                <option value="Barra-Fixa">Barra Fixa</option> -->
+                            </select>
+                            <button onclick="Modal.openNewExercise()" class="button-input-exercises">+</button>
+                        </div>
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="series-amount">Número de Séries</label>
-                        <input type="number" step="1" id="series-amount" name="Quantidade de Séries" placeholder="0">
+                        <input id="add-exercise-series" class="input" type="number" step="1" id="series-amount" name="Quantidade de Séries" placeholder="0">
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="reps-amount">Número de Repetições por Série</label>
-                        <input type="text" step="1" id="reps-amount" name="Quantidade de Repetições por Série" placeholder="0">
+                        <input id="add-exercise-reps" class="input" type="number" step="1" id="reps-amount" name="Quantidade de Repetições por Série" placeholder="0">
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="time-spent">Tempo de Realização do Exercício (em minutos)</label>
-                        <input type="number" step="1" id="time-spent" name="Tempo de Realização" placeholder="0">
+                        <input id="add-exercise-time" class="input" type="number" step="1" id="time-spent" name="Tempo de Realização" placeholder="0">
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="exercise-date">Data</label>
-                        <input type="date" id="exercise-date" name="Data de Realização do Exercício" placeholder="DD/MM/AAAA">
+                        <input id="add-exercise-date" class="input" type="date" id="exercise-date" name="Data de Realização do Exercício" placeholder="DD/MM/AAAA">
                     </div>
                     <div class="input-group actions">
-                        <a href="#" class="button-cancel">Cancelar</a>
-                        <button>Confirmar</button>
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button onclick="NewRegisterForm.submit(event)" class="button confirm">Confirmar</button>
                     </div>
+                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="ov-create-exercise" class="overlay create-exercise">
+        <div class="modal">
+            <div class="form">
+                <h2>Criar Exercício</h2>
+                <form action="" onsubmit="preventDefault()">
+                    <div class="input-group">
+                        <label class="sr-only" for="exercise-name">Nome</label>
+                        <input class="input" type="text" id="exercise-name" name="Nome do Exercício" placeholder="Nome">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.closeNewEx()" class="button cancel">Cancelar</a>
+                        <button onclick="NewExerciseForm.submit(event)" class="button confirm">Confirmar</button>
+                    </div>
+                    <small class="error hidden-content">Todos os campos devem ser preenchidos</small>
                 </form>
             </div>
         </div>
     </div>
 
     <div class="overlay confirm-delete">
-        <p>Tem certeza que deseja excluir?</p>
-        <div class="input-group actions">
-            <a href="#" class="button-cancel">Cancelar</a>
-            <button>Confirmar</button>
+        <div class="modal">
+            <p>Tem certeza que deseja excluir o perfil?</p>
+            <div class="input-group actions">
+                <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                <button onclick="Profiles.remove(0)" class="button confirm">Confirmar</button>
+            </div>
         </div>
     </div>
 

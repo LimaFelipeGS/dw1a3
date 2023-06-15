@@ -1,8 +1,10 @@
 :root {
     --brandpurple: #5F2DAD;
     --sectionbg: #303030;
-    --background: #4b4b4b;
+    --background: #4D4D4D;
     --header: #171717;
+    --modalbg: #171717;
+    --background-light: #3f3f3f;
 }
 
 * {
@@ -12,7 +14,7 @@
 
     color: white;
 
-    font-family: 'Ramabhadra', sans-serif;
+    font-family: 'Alata', sans-serif;
 }
 
 body {
@@ -23,32 +25,46 @@ body {
     text-decoration: none;
 }
 
+section {
+    margin: 20px 2vw 35px 2vw;
+    background-color: var(--sectionbg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
 /*=============================== HEADER ===============================*/
 
 .button-header.class {
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    font-size: 18px;
+    width: 100%;
+    font-size: 16px;
 }
 
-.button.header.profile {
-    border: 2px solid var(--brandpurple);
-    border-radius: 10px 0px 0px 0px;
-    width: 150px;
+.button-header.profile {
+    border-top: 2px solid var(--brandpurple);
+    border-right: 1px solid var(--brandpurple);
+    width: 50vw;
+    padding-top: 7px;
+    padding-bottom: 9px;
     background-color: var(--header);
     text-align: center;
+    text-decoration: none;
 }
 
-.button.header.controller {
-    border: 2px solid var(--brandpurple);
-    border-radius: 0px 10px 0px 0px;
-    width: 150px;
+.button-header.controller {
+    border-top: 2px solid var(--brandpurple);
+    border-left: 1px solid var(--brandpurple);
+    width: 50vw;
+    padding-top: 7px;
+    padding-bottom: 9px;
     background-color: var(--header);
     text-align: center;
+    text-decoration: none;
 }
 
-.button.header.active {
+.button-header.on {
     background-color: var(--brandpurple);
 }
 
@@ -70,23 +86,45 @@ header {
 
 /*=============================== PROFILE ===============================*/
 
-#profile {
-    margin: 20px 35px 35px 35px;
-    background-color: var(--sectionbg);
-    padding: 30px;
-    border-radius: 15px;
-}
 .stats-body.standard {
     margin-bottom: 60px;
 }
+
 .button.profile-general {
     display: flex;
     flex-direction: row;
 }
 
+.button-profile-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 15px 0;
+    background-color: var(--background);
+    opacity: 0.5;
+    padding: 50px;
+    width: 90vw;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 40px;
+    position: relative;
+    left: 0.7vw;
+    border-radius: 15px;
+}
+
+.plus {
+    font-size: 64px;
+}
+
+.button-profile-new:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
 .button.section.profile {
     border: 2px solid var(--brandpurple);
-    padding: 1px 20px 1px 20px;
+    font-size: 14px;
+    padding: 5px 20px 5px 20px;
     border-radius: 20px;
     margin-right: 20px;
     margin-bottom: 50px;
@@ -96,16 +134,22 @@ header {
     background-color: var(--brandpurple);
 }
 
-/*=============================== PROFILE-STATS ===============================*/
-
 .profile-body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    cursor: default;
 }
+
+/*=============================== PROFILE-STATS ===============================*/
 
 .profile-stats {
     margin-top: 100px;
+    margin-right: 30px;
+    margin-left: 95px;
+}
+
+.inner-profile-stats {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,6 +181,7 @@ header {
     border: 3px solid var(--brandpurple);
     border-radius: 0px 0px 10px 10px;
     width: 120px;
+    padding: 5px 0px 5px 0px;
     margin-top: -3px;
     margin-bottom: 60px;
 }
@@ -150,6 +195,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: -7px;
 }
 
 .gainloss-stats {
@@ -167,8 +213,8 @@ header {
 /*=============================== GENERAL STATS ===============================*/
 
 .stats-title {
-    margin-bottom: 5px;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .stats-body {
@@ -179,26 +225,30 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .stat-type {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /*=============================== PROFILE-IMG-BODY ===============================*/
 
 .img-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0px;
+    margin-left: -50px;
     margin-right: 60px;
 }
 
+.name-body-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile-name {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #body-figure {
@@ -209,47 +259,187 @@ header {
 /*=============================== PROFILE-TABLE ===============================*/
 
 .table-profile {
-    margin-left: -70px;
-    margin-right: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -120px;
+    margin-right: -30px;
     margin-top: 100px;
 }
 
-#weight-history {
-    /* border-spacing: 75px 20px; */
-    border-collapse: collapse;
+#table-title {
+    font-size: 24px;
 }
 
-th, td {
-    padding: 10px 50px 10px 50px;
-    /* margin-bottom: 10px; */
+#weight-history {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 10px;
 }
 
 table tr {
-    opacity: 0.7;
-    background-color: orange;
-    border: 2px solid orange;
-    border-radius: 20px;
     text-align: center;
 }
 
 table tr:hover {
-    opacity: 1;
     cursor: default;
+}
+
+#weight-history td {
+    border: solid 3px var(--brandpurple);
+    border-style: solid none;
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 10px;
+    background-color: var(--sectionbg);
+}
+
+#weight-history td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#weight-history td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /*=============================== CONTROLLER ===============================*/
 
-#controller {
-    visibility: hidden;
+.button.section.controller {
+    border: 2px solid var(--brandpurple);
+    font-size: 14px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
 }
 
-.footer {
-    
+.button.section.controller:hover {
+    background-color: var(--brandpurple);
+}
+
+.controller-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: default;
+}
+
+/*=============================== CONTROLLER-STATS ===============================*/
+
+.controller-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-exercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-right: 20px;
+}
+
+.stats-body.te {
+    border-radius: 10px;
+}
+
+.total-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.stats-body.tt {
+    border-radius: 10px;
+    margin-right: 7px;
+}
+
+.total-time-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: -30px;
+}
+
+.total-days {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-right: 8px;
+}
+
+.stats-body.td {
+    border-radius: 10px;
+    margin-right: 7px;
+}
+
+.total-days-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: -30px;
+}
+
+/*=============================== CONTROLLER-TABLE ===============================*/
+
+#exercises-added {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    height: 0;
+}
+
+#exercises-added td {
+    border: solid 3px var(--brandpurple);
+    border-style: solid none;
+    padding: 10px 35px 10px 35px;
+    margin-bottom: 10px;
+    background-color: var(--sectionbg);
+}
+
+#exercises-added td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#exercises-added td:nth-last-child(2) {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#exercises-added td:last-child {
+    border: none;
+    max-width: 30px
+}
+
+.lixopng {
+    width: 20px;
+    cursor: pointer;
+}
+
+/*=============================== FOOTER ===============================*/
+
+footer {
+    padding: 40px 0px 40px 0px;
 }
 
 .footer-text {
     text-align: center;
+    font-weight: normal;
+    font-size: 14px;
 }
+
+/*=============================== OVERLAYS ===============================*/
 
 .overlay {
     width: 100%;
@@ -271,8 +461,158 @@ table tr:hover {
     visibility: visible;
 }
 
+.modal {
+    background-color: var(--modalbg);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.help {
+    color: white;
+    opacity: 0.4;
+}
+
+#form {
+    max-width: 500px;
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+.input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    margin-top: 5px;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+}
+
+.input-exercises {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-input-exercises {
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: var(--modalbg);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-top: 1rem;
+}
+
+.input-group.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+.button.cancel {
+    text-decoration: none;
+}
+
+.button.confirm {
+    text-decoration: none;
+    background-color: var(--modalbg);
+    border: 2px solid var(--brandpurple);
+    border-radius: 20px;
+    padding: 3px 0px 3px 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button.confirm:hover {
+    background-color: var(--brandpurple);
+}
+
+.error {
+    color: red;
+}
+
+/*=============================== JS ===============================*/
+
 .hidden-content {
     position: fixed;
     top: 0;
     visibility: hidden;
+}
+
+/*=============================== REPONSIVIDADE ===============================*/
+
+@media (max-width: 1150px) {
+    .profile-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 1.5vw 0 1.5vw;
+        order: 2;
+    }
+
+    .inner-profile-stats {
+        display: flex;
+        flex-direction: row;
+        /* margin-right: 1vw; */
+    }
+
+    #profile-height-div {
+        margin-right: 17vw;
+        margin-left: 1vw;
+    }
+
+    .img-body {
+        margin: 0 0 15vh 0;
+        order: 1;
+    }
+
+    #body-figure {
+        display: none;
+    }
+
+    .table-profile {
+        margin: 10vh 0 0 0;
+        order: 3;
+    }
+
+    .controller-body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .controller-stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5vh 0 15vh 0;
+    }
+
+    .total-exercises {
+        margin: 0;
+    }
+
+    .total-time {
+        margin: 0 8vw 0 0;
+    }
+
+    .total-days {
+        margin: 0;
+    }
 }
